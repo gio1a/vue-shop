@@ -24,9 +24,18 @@ import {
   Tooltip,
   Pagination,
   Dialog,
-  MessageBox
+  MessageBox,
+  Tag,
+  Tree,
+  Select,
+  Option,
 } from 'element-ui'
 
+
+// Vue.use()
+// Vue.use()
+// Vue.use()
+// Vue.use()
 Vue.use(Button)
 Vue.use(Form)
 Vue.use(FormItem)
@@ -50,9 +59,10 @@ Vue.use(Switch)
 Vue.use(Tooltip)
 Vue.use(Pagination)
 Vue.use(Dialog)
-// Vue.use()
-// Vue.use()
-// Vue.use()
+Vue.use(Tag)
+Vue.use(Tree)
+Vue.use(Select)
+Vue.use(Option)
 
 // Message组件要全局挂载
 Vue.prototype.$message = Message
