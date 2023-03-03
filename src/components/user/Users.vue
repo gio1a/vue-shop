@@ -21,6 +21,7 @@
                     <el-button type="primary" @click="addDialogVisible = true">添加用户</el-button>
                 </el-col>
             </el-row>
+            
             <!-- 用户列表区域 -->
             <el-table :data="userList" border stripe>
                 <el-table-column type="index" label="#"></el-table-column>
@@ -105,26 +106,26 @@
             width="50%"
             @close="editDialogClosed"
         >
-        <!-- 内容主体区域 -->
-        <el-form 
-        :model="editUserForm" :rules="editUserFormRules" ref="editUserFormRef" label-width="70px">
-                <el-form-item label="用户名">
-                    <el-input v-model="editUserForm.username" disabled></el-input>
-                </el-form-item>
-                <el-form-item label="邮箱" prop="email">
-                    <el-input v-model="editUserForm.email"></el-input>
-                </el-form-item>
-                <el-form-item label="手机号" prop="mobile">
-                    <el-input v-model="editUserForm.mobile"></el-input>
-                </el-form-item>
-            </el-form>
+            <!-- 内容主体区域 -->
+            <el-form 
+            :model="editUserForm" :rules="editUserFormRules" ref="editUserFormRef" label-width="70px">
+                    <el-form-item label="用户名">
+                        <el-input v-model="editUserForm.username" disabled></el-input>
+                    </el-form-item>
+                    <el-form-item label="邮箱" prop="email">
+                        <el-input v-model="editUserForm.email"></el-input>
+                    </el-form-item>
+                    <el-form-item label="手机号" prop="mobile">
+                        <el-input v-model="editUserForm.mobile"></el-input>
+                    </el-form-item>
+                </el-form>
 
-        <!-- 底部按钮区域 -->
-        <span slot="footer" class="dialog-footer">
-            <el-button @click="editDialogVisible = false">取 消</el-button>
-            <el-button type="primary" 
-            @click="editUser">确 定</el-button>
-        </span>
+            <!-- 底部按钮区域 -->
+            <span slot="footer" class="dialog-footer">
+                <el-button @click="editDialogVisible = false">取 消</el-button>
+                <el-button type="primary" 
+                @click="editUser">确 定</el-button>
+            </span>
         </el-dialog>
 
         <!-- 分配角色对话框 -->
@@ -134,25 +135,25 @@
         width="50%"
         @close="setRoleDialogClosed">
     
-        <div>
-            <p>当前的用户: {{ userInfo.username }}</p>
-            <p>当前的角色: {{ userInfo.role_name }}</p>
-            <p>重新分配角色:
-                <el-select v-model="selectedRoleId" placeholder="请选择">
-                    <el-option
-                    v-for="item in rolesList"
-                    :key="item.id"
-                    :label="item.roleName"
-                    :value="item.id">
-                    </el-option>
-                </el-select>
-            </p>
-        </div>
-        
-        <span slot="footer" class="dialog-footer">
-            <el-button @click="setRoleDialogVisible = false">取 消</el-button>
-            <el-button type="primary" @click="saveRoleInfo">确 定</el-button>
-        </span>
+            <div>
+                <p>当前的用户: {{ userInfo.username }}</p>
+                <p>当前的角色: {{ userInfo.role_name }}</p>
+                <p>重新分配角色:
+                    <el-select v-model="selectedRoleId" placeholder="请选择">
+                        <el-option
+                        v-for="item in rolesList"
+                        :key="item.id"
+                        :label="item.roleName"
+                        :value="item.id">
+                        </el-option>
+                    </el-select>
+                </p>
+            </div>
+            
+            <span slot="footer" class="dialog-footer">
+                <el-button @click="setRoleDialogVisible = false">取 消</el-button>
+                <el-button type="primary" @click="saveRoleInfo">确 定</el-button>
+            </span>
         </el-dialog>
     </div>
 </template>

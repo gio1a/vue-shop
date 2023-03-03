@@ -29,13 +29,14 @@ import {
   Tree,
   Select,
   Option,
+  Cascader,
 } from 'element-ui'
 
 
 // Vue.use()
 // Vue.use()
 // Vue.use()
-// Vue.use()
+Vue.use(Cascader)
 Vue.use(Button)
 Vue.use(Form)
 Vue.use(FormItem)
