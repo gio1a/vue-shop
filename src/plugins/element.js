@@ -30,12 +30,19 @@ import {
   Select,
   Option,
   Cascader,
+  Alert,
+  Tabs,
+  TabPane,
 } from 'element-ui'
 
 
 // Vue.use()
 // Vue.use()
 // Vue.use()
+// Vue.use()
+Vue.use(TabPane)
+Vue.use(Tabs)
+Vue.use(Alert)
 Vue.use(Cascader)
 Vue.use(Button)
 Vue.use(Form)
