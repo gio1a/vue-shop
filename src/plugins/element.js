@@ -38,12 +38,17 @@ import {
   Checkbox,
   CheckboxGroup,
   Upload,
+  Timeline,
+  TimelineItem
 } from 'element-ui'
 
 
 // Vue.use()
 // Vue.use()
 // Vue.use()
+// Vue.use()
+Vue.use(TimelineItem)
+Vue.use(Timeline)
 Vue.use(Upload)
 Vue.use(CheckboxGroup)
 Vue.use(Checkbox)
