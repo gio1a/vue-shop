@@ -12,7 +12,7 @@
     </div>
 </template>
 <script>
-import * as echarts from 'echarts'
+// import * as echarts from 'echarts'
 import _ from 'lodash'
 
 export default {
@@ -64,7 +64,7 @@ export default {
 
             const option = _.merge(res.data, this.initOption)
 
-            this.chartInstance = echarts.init(this.$refs.user_ref)//, 'light')
+            this.chartInstance = this.$echarts.init(this.$refs.user_ref)//, 'light')
             this.chartInstance.setOption(option)
         }
     }

@@ -102,7 +102,7 @@
     </div>
 </template>
 <script>
-import moment from 'moment'
+import dayjs from 'dayjs'
 
 export default {
     data(){
@@ -157,7 +157,7 @@ export default {
                 return this.$message.error('获取商品列表失败！')
             }
             res.data.goods.forEach((item) => {
-                item.add_time = moment(parseInt(item.add_time)).format('YYYY-MM-DD HH:mm:ss')
+                item.add_time = dayjs(parseInt(item.add_time)).format('YYYY-MM-DD HH:mm:ss')
             })
             console.log('商品列表---->',res.data.goods)
             this.goodsList = res.data.goods

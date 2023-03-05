@@ -105,7 +105,7 @@
     </div>
 </template>
 <script>
-import moment from 'moment'
+import dayjs from 'dayjs'
 import cityData from './citydata'
 export default {
     data(){
@@ -211,7 +211,7 @@ export default {
             }
             
             res.data.goods.forEach((item) => {
-                item.create_time = moment(parseInt(item.create_time)).format('YYYY-MM-DD HH:mm:ss')
+                item.create_time = dayjs(parseInt(item.create_time)).format('YYYY-MM-DD HH:mm:ss')
             })
             console.log('订单列表 ------> ', res.data)
             this.orderList = res.data.goods
